@@ -301,7 +301,7 @@ const App: React.FC = () => {
           placeholder="请输入手机号 (绑定身份)" 
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
-          className="w-full bg-[#1e1b4b]/40 border border-purple-500/20 rounded-full py-3 px-5 md:py-4 md:px-6 text-sm md:text-base text-center text-white placeholder-purple-300/30 focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/20 transition-all backdrop-blur-md"
+          className="w-full bg-[#1e1b4b]/40 border border-purple-500/20 rounded-full py-3 px-5 md:py-4 md:px-6 text-base text-center text-white placeholder-purple-300/30 focus:outline-none focus:border-pink-400/50 focus:ring-1 focus:ring-pink-400/20 transition-all backdrop-blur-md"
         />
         
         <button 
@@ -343,8 +343,9 @@ const App: React.FC = () => {
 
         {/* Question - Flexible Height */}
         <div className="mb-6 flex-grow flex items-center md:mb-12 min-h-[60px]">
-          <h2 className="text-lg md:text-2xl leading-relaxed font-light text-white">
-            <span className="font-serif text-xl md:text-3xl mr-2 text-fuchsia-300/40 opacity-60">{currentQuestionIndex + 1}.</span> {question.text}
+          <h2 className="text-lg md:text-2xl leading-relaxed font-light text-white flex items-start">
+            <span className="font-serif text-xl md:text-3xl mr-2 md:mr-3 text-fuchsia-300/40 opacity-60 shrink-0 mt-0.5 md:mt-0">{currentQuestionIndex + 1}.</span> 
+            <span>{question.text}</span>
           </h2>
         </div>
 
